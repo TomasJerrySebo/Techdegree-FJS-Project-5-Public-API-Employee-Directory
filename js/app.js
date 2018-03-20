@@ -39,7 +39,7 @@ fetch('https://randomuser.me/api/?results=12')
         person.state = ((typeof(people.location.state) !== undefined)) ? people.location.state : '';
         person.postcode = ((typeof(people.location.postcode) !== undefined)) ? people.location.postcode : '';
         // escaping single quote for the purpouse of using in other JS append function
-        person.fullAddress = (person.street+', '+person.state+', '+person.postcode).replace(/'/g, "\\'");;
+        person.fullAddress = (person.street+', '+person.state+', '+person.city+', '+person.postcode).replace(/'/g, "\\'");;
         // append the data to the box elements with the forEeac loop, also with the clickEvents and modal triggering
         document.getElementById('employee-list').innerHTML += `<div class="col-sm-12 col-md-6 col-lg-4">
             <div class="container">
